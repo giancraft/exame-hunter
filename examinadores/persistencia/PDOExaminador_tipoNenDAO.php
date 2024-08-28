@@ -12,8 +12,8 @@ class PDOExaminador_tipoNenDAO
     function __construct()
     {
         $dsn = 'mysql:host=localhost;dbname=exame_hunter';
-        $user = 'gian';
-        $password = '1234';
+        $user = 'root';
+        $password = '';
 
         try {
             $this->conn = new PDO($dsn, $user, $password);
