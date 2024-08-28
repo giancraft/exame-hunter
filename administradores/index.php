@@ -122,7 +122,7 @@ require_once "persistencia/PDOAdministradorDAO.php";
     <footer>
         <div id="footer_content" class="alien">
             <div id="footer_contacts">
-                <h1 class="alien">Logo</h1>
+                <h1>Logo</h1>
                 <p>It's all about your dreams.</p>
 
                 <div id="footer_social_media">
@@ -179,10 +179,7 @@ require_once "persistencia/PDOAdministradorDAO.php";
                 </p>
 
                 <div id="input_group">
-                    <input type="email" id="email">
-                    <button>
-                        <i class="fa-regular fa-envelope"></i>
-                    </button>
+                    <a href="../contato/index.php"><button class="btn btn-dark">Contato</button></a>
                 </div>
             </div>
         </div>

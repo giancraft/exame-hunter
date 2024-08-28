@@ -196,10 +196,7 @@ require_once "persistencia/PDOCandidatoDAO.php";
                 </p>
 
                 <div id="input_group">
-                    <input type="email" id="email">
-                    <button>
-                        <i class="fa-regular fa-envelope"></i>
-                    </button>
+                    <a href="../contato/index.php"><button class="btn btn-dark">Contato</button></a>
                 </div>
             </div>
         </div>

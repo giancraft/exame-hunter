@@ -149,7 +149,7 @@ if ($id != 0)
         }
     </script>
 
-<footer>
+    <footer>
         <div id="footer_content" class="alien">
             <div id="footer_contacts">
                 <h1>Logo</h1>
@@ -209,10 +209,7 @@ if ($id != 0)
                 </p>
 
                 <div id="input_group">
-                    <input type="email" id="email">
-                    <button>
-                        <i class="fa-regular fa-envelope"></i>
-                    </button>
+                    <a href="../contato/index.php"><button class="btn btn-dark">Contato</button></a>
                 </div>
             </div>
         </div>
