@@ -12,6 +12,25 @@ error_reporting(E_ALL);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Cadastro</title>
+    <style>
+        #bbb{
+            background-color: #5dd55d;
+            height: 500px;
+            width: 500px;
+            border-radius:20px;
+            padding-top:20px;
+            padding-left:10px;
+            padding-right:10px;
+            border: 5px solid;
+        }
+
+        #aaa{
+            background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/defab05d-48e2-49f8-9e6c-74b3434b61a2/d6se8de-d10f089b-5b9c-40fa-b919-42a2a37f4781.png");
+            background-size: 200px;
+
+        }
+    </style>
+
 <?php
 include "candidato_acao.php";
 $id = isset($_GET['id']) ? $_GET['id'] : 0;
@@ -21,10 +40,14 @@ if ($id != 0)
 ?>
 
 <body>
+    
     <?php include 'menu.php'; ?>
     <div class="d-flex justify-content-center">
         <form action="candidato_acao.php" method="post">
+        <div id="aaa">
             <fieldset>
+                <br><br>
+            <div id="bbb">
                 <legend>Cadastro de Candidato</legend>
 
                 <div class="form-group">
@@ -59,8 +82,10 @@ if ($id != 0)
                         echo "Alterar";
                     ?>">
                 </div>
+                </div>
             </fieldset>
         </form>
+    </div>
     </div>
     <footer class="container"></footer>
 </body>
