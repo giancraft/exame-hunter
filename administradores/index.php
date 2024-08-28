@@ -11,7 +11,8 @@ require_once "persistencia/PDOAdministradorDAO.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../CSS/style.css">    
+    <link rel="stylesheet" href="../CSS/style.css"> 
+    <link rel="stylesheet" href="../CSS/print-dashboard.css">   
     <title>Administradores</title>
     <style>
 
@@ -60,10 +61,15 @@ require_once "persistencia/PDOAdministradorDAO.php";
                 color: black;
                 font-weight: bold
             }
+
+            .formulario{
+                padding-left: 100px;
+                padding-top: 10px;
+            }
     </style>
 </head>
 <body id= "aaa">
-    <div id = "principal"> 
+    <div id = "principal" class = "no-print"> 
             <div>
                 <img src="https://yt3.googleusercontent.com/E0CZm2Cm34dEsiPlu5STIOvXE-NK5q09Cc2wz3VDvjdvnTAhahEAO51cF1O__X07tJw9huWL=s900-c-k-c0x00ffffff-no-rj" alt="Webu" id="logo">
             </div>
@@ -74,6 +80,8 @@ require_once "persistencia/PDOAdministradorDAO.php";
 
     <div id = "bbb">
     <h1>Administradores</h1>
+        <br>
+    <button class = "btn btn-dark no-print" style="margin-left: 10px;" onclick="window.print()">Criar Formulário</button>
             
         <?php include 'menu.php'; ?>
         <?php
@@ -83,7 +91,7 @@ require_once "persistencia/PDOAdministradorDAO.php";
         $dados = array();
         $dados = $dao->listar();
         ?>
-        <table class="table table-hover" border="1px">
+        <table class="table table-hover " border="1px">
             <tr>
                 <th>Id</th>
                 <th>Nome</th>
@@ -102,8 +110,8 @@ require_once "persistencia/PDOAdministradorDAO.php";
                         <td>{$id}</td>
                         <td>{$nome}</td>
                         <td>{$email}</td>
-                        <td><a role='button' href='show.php?id={$id}'><button class='btn btn-dark'>Detalhes</button></a></td>
-                        <td><a role='button' href='cadastro.php?id={$id}'><button class='btn btn-dark'>Alterar</button></a></td>
+                        <td><a role='button' href='show.php?id={$id}'><button class='btn btn-dark no-print'>Detalhes</button></a></td>
+                        <td><a role='button' href='cadastro.php?id={$id}'><button class='btn btn-dark no-print'>Alterar</button></a></td>
                         <td><a role='button' href='javascript:excluirRegistro(\"admin_acao.php?acao=Excluir&id={$id}\");'><button class='btn btn-danger'>Excluir</button></a></td>
                       </tr>";
             }
@@ -120,7 +128,7 @@ require_once "persistencia/PDOAdministradorDAO.php";
     </div>
     <br>
     <footer>
-        <div id="footer_content" class="alien">
+        <div id="footer_content" class="alien no-print">
             <div id="footer_contacts">
                 <h1>Logo</h1>
                 <p>It's all about your dreams.</p>

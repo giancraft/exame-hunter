@@ -149,7 +149,7 @@ if ($id != 0)
         }
     </script>
 
-    <footer>
+<footer>
         <div id="footer_content" class="alien">
             <div id="footer_contacts">
                 <h1>Logo</h1>
