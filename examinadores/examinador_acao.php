@@ -139,19 +139,21 @@ function salvar()
     $dao = PDOExaminadorDAO::getInstance();
     $objeto = array2objeto($novo);
 
-    $examinadorId = $dao->insert($objeto->nome, $objeto->peso, $objeto->altura, $objeto->dataNascimento); 
+    $dao->insert($objeto->nome, $objeto->peso, $objeto->altura, $objeto->dataNascimento); 
+
+    $examinadorId = $dao->obterNome($objeto->nome);
 
     if (!empty($tipoNen_id)){
         $daoExaminadorTipoNen = PDOExaminador_TipoNenDAO::getInstance();
 
         foreach ($tipoNen_id as $tipoNenId) {
             if (!empty($tipoNenId)){
-                $daoExaminadorTipoNen->insert($examinadorId, $tipoNenId);
+                $daoExaminadorTipoNen->insert($examinadorId['id'], $tipoNenId);
             }
         }
     }
 
-    header("Location: cadastro.php?id=" . $novo['id']);
+    header("Location: cadastro.php?id=" . $examinadorId['id']);
     exit();
 }
 ?>

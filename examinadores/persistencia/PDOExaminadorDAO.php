@@ -141,5 +141,24 @@ class PDOExaminadorDAO
         return $examinador;
     }
 
+    public function obterNome($nome)
+    {
+        $examinador = array();
+        try {
+            $stmt = $this->conn->prepare("SELECT * FROM examinador WHERE nome = ?");
+            $stmt->execute([$nome]);
+            if ($linha = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $examinador['id'] = $linha['id'];
+                $examinador['nome'] = $linha['nome'];
+                $examinador['peso'] = $linha['peso'];
+                $examinador['altura'] = $linha['altura'];
+                $examinador['dataNascimento'] = $linha['dataNascimento'];
+            }
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+        return $examinador;
+    }
+
 }
 ?>

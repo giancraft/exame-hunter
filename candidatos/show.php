@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require_once "persistencia/PDOExaminadorDAO.php";
+require_once "persistencia/PDOCandidatoDAO.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@ require_once "persistencia/PDOExaminadorDAO.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <?php
-    include "examinador_acao.php";
+    include "candidato_acao.php";
     $id = isset($_GET['id']) ? $_GET['id'] : 0;
     $dados = array();
     if ($id != 0)
