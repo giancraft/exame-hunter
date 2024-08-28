@@ -1,6 +1,11 @@
 @font-face {
     font-family: "hunterxhunter";
-    src: url("../Fontes/hunterxhunter.otf");
+    src: url("../Fontes/hunterxhunter.otf")
+    format("opentype");
+}
+
+.alien{
+    font-family: "hunterxhunter";
 }
 
 :root {

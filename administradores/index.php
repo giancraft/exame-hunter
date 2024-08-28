@@ -118,11 +118,11 @@ require_once "persistencia/PDOAdministradorDAO.php";
         }
     </script>
     </div>
-    <br><br>
+    <br>
     <footer>
-        <div id="footer_content">
+        <div id="footer_content" class="alien">
             <div id="footer_contacts">
-                <h1>Logo</h1>
+                <h1 class="alien">Logo</h1>
                 <p>It's all about your dreams.</p>
 
                 <div id="footer_social_media">

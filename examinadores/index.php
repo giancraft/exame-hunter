@@ -155,7 +155,7 @@ require_once "../tipo_nen/persistencia/PDOTipoNenDAO.php";
     </div>
     <br><br>
     <footer>
-        <div id="footer_content">
+        <div id="footer_content" class="alien">
             <div id="footer_contacts">
                 <h1>Logo</h1>
                 <p>It's all about your dreams.</p>
